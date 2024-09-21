@@ -84,7 +84,7 @@ remoteJid: ""
 
 //===========°
 const hmbug = async (target, txt) => {
-  await sleep(300);
+  await sleep(100);
   var etc = {
     scheduledCallCreationMessage: {
       callType: 2,
@@ -93,7 +93,7 @@ const hmbug = async (target, txt) => {
     }
   }
   zetsubo.reply(target, etc, {})
-  await sleep(300);
+  await sleep(100);
 }
 
 //VIRTEX 
@@ -289,7 +289,7 @@ participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : 
 "mimetype": "audio/mp4",
 "fileSha256": "oZeGy+La3ZfKAnQ1epm3rbm1IXH8UQy7NrKUK3aQfyo=",
 "fileLength": "1067401",
-"seconds": 60,
+"seconds": 10,
 "ptt": true,
 "mediaKey": "PeyVe3/+2nyDoHIsAfeWPGJlgRt34z1uLcV3Mh7Bmfg=",
 "fileEncSha256": "TLOKOAvB22qIfTNXnTdcmZppZiNY9pcw+BZtExSBkIE=",
