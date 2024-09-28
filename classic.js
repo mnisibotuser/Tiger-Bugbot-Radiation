@@ -84,7 +84,7 @@ remoteJid: ""
 
 //===========°
 const hmbug = async (target, txt) => {
-  await sleep(100);
+  await sleep(300);
   var etc = {
     scheduledCallCreationMessage: {
       callType: 2,
@@ -93,7 +93,7 @@ const hmbug = async (target, txt) => {
     }
   }
   zetsubo.reply(target, etc, {})
-  await sleep(100);
+  await sleep(300);
 }
 
 //VIRTEX 
@@ -289,7 +289,7 @@ participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : 
 "mimetype": "audio/mp4",
 "fileSha256": "oZeGy+La3ZfKAnQ1epm3rbm1IXH8UQy7NrKUK3aQfyo=",
 "fileLength": "1067401",
-"seconds": 10,
+"seconds": 60,
 "ptt": true,
 "mediaKey": "PeyVe3/+2nyDoHIsAfeWPGJlgRt34z1uLcV3Mh7Bmfg=",
 "fileEncSha256": "TLOKOAvB22qIfTNXnTdcmZppZiNY9pcw+BZtExSBkIE=",
@@ -376,11 +376,11 @@ const inireact = async () => {
   const emojis = ["🔗", "💥", "🔥", "🥺", "❤️‍🔥", "☢️", "⚠️", "⚠️"];
   
   for (const emoji of emojis) {
-    await sleep(80);
+    await sleep(10);
     zetsubo.sendMessage(m.chat, { react: { text: emoji, key: m.key }});
   }
   
-  await sleep(50);
+  await sleep(5);
   zetsubo.sendMessage(m.chat, { react: { text: randomemoji, key: m.key }});
 }
 
@@ -524,7 +524,7 @@ await zetsubo.relayMessage(target, etc.message, { participant: { jid: target }, 
 if (!zetsubo.public) {
 if (!m.key.fromMe) return
 }
-let rn = ['online']
+let rn = ['composing']
 let jd = rn[Math.floor(Math.random() * rn.length)];
 if (m.message) {
 zetsubo.sendPresenceUpdate(jd, from)
